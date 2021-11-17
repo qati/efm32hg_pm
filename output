@@ -1,0 +1,17 @@
+*** Booting Zephyr OS build v2.7.99-1259-gbbe8f182c79e  ***
+I: HELLO
+ROUND 0
+D: Selected power state 1 (ticks: 10001, min_residency: 100000) to cpu 0
+D: SoC entering power state 1
+D: SoC leaving power state 1
+D: Selected power state 1 (ticks: 2986, min_residency: 100000) to cpu 0
+D: SoC entering power state 1
+D: SoC leaving power state 1
+E: ***** HARD FAULT *****
+E: r0/a1:  0x800020f0  r1/a2:  0x2000083c  r2/a3:  0x2000083c
+E: r3/a4:  0x000004a7 r12/ip:  0x2000083c r14/lr:  0x000004fb
+E:  xpsr:  0x81000000
+E: Faulting instruction address (r15/pc): 0x200007ea
+E: >>> ZEPHYR FATAL ERROR 0: CPU exception on CPU 0
+E: Current thread: 0x20000380 (unknown)
+E: Halting system

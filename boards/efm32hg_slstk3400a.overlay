@@ -1,0 +1,31 @@
+
+/ {
+	power-states {
+		em1: state0 {
+			compatible = "zephyr,power-state";
+			power-state-name = "runtime-idle";
+			substate-id = <1>;
+			min-residency-us = <100000>;
+		};
+		em2: state1 {
+			compatible = "zephyr,power-state";
+			power-state-name = "suspend-to-idle";
+			substate-id = <2>;
+			min-residency-us = <5000000>;
+			exit-latency-us = <2>;
+		};
+		em3: state2 {
+			compatible = "zephyr,power-state";
+			power-state-name = "standby";
+			substate-id = <3>;
+			min-residency-us = <10000000>;
+			exit-latency-us = <2>;
+		};
+
+	};
+};
+
+&cpu0 {
+	//clock-frequency = <1200000>;
+	cpu-power-states = <&em1 &em2 &em3>;
+};
